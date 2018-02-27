@@ -47,6 +47,13 @@ app.get('/about', (request, response) => {
   });
 });
 
+app.get('/projects', (request, response) => {
+  response.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    paragraph: 'These are my projects',
+  })
+})
+
 app.get('/bad', (request, response) => {
   response.send({
     errorMessage: 'Bad Request Bruh',
